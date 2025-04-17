@@ -91,7 +91,7 @@ const testimonials: TestimonialCardProps[] = [
   },
 ];
 const TestimonialCard: FC<TestimonialCardProps> = ({ name, title, text }) => (
-  <div className="border border-[#E1E4ED] rounded-xl p-6 shadow-md space-y-4 bg-white h-[283px] flex flex-col  justify-center">
+  <div className="border border-[#E1E4ED] rounded-xl p-6 shadow-md space-y-4 bg-white lg:h-[283px] flex flex-col  justify-center">
     <div className="flex space-x-1 text-[#B4B9C9]">
       {Array(5)
         .fill(null)
@@ -148,11 +148,11 @@ export default function Page() {
   }, [isOpen]);
   return (
     <>
-      <div className="">
+      <div className="border-2 w-full items-center justify-center">
         <header className="bg-[#F3F4F8] text-[#6B738C] fixed top-0 left-0 w-full z-50 shadow-sm">
-          <div className="max-w-7xl mx-auto px-4 py-4 lg:py-6 flex items-center justify-between">
+          <div className="max-w-7xl mx-auto px-4 py-4 md:py-6 flex items-center justify-between">
             {/* Logo */}
-            <div className="text-3xl lg:text-4xl font-bold tracking-wide drop-shadow-sm">
+            <div className="text-3xl md:text-4xl font-bold tracking-wide drop-shadow-sm">
               <Image
                 src="/logo.svg"
                 width={100}
@@ -163,7 +163,7 @@ export default function Page() {
             </div>
 
             {/* Desktop Nav */}
-            <nav className="hidden lg:flex items-center space-x-8 text-base">
+            <nav className="hidden md:flex items-center space-x-8 text-base">
               <Link href="#" className="hover:opacity-80 transition">
                 Join as a Pro
               </Link>
@@ -182,7 +182,7 @@ export default function Page() {
 
             {/* Mobile Menu Icon */}
             <button
-              className="lg:hidden focus:outline-none"
+              className="md:hidden focus:outline-none"
               onClick={() => setIsOpen(true)}
               aria-label="Open menu"
             >
@@ -227,44 +227,47 @@ export default function Page() {
             </div>
           )}
         </header>
-        <section className="bg-white px-6 py-12 lg:py-24 lg:h-[812px] h-[1000px] flex items-center justify-center">
-          <div className="mx-auto max-w-7xl flex flex-col-reverse lg:grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left Image Placeholder */}
-            <div className="w-full h-80 lg:h-[400px] bg-gray-100 rounded-2xl flex items-center  justify-center">
-              <Image
-                src="/image/hero.svg"
-                width={100}
-                height={100}
-                className="w-auto"
-                alt="hero image"
-              />
-            </div>
+        <div className="w-full flex items-center justify-center bg-gray-100  lg:h-[930px] ">
+          <section className="bg-white w-full max-w-7xl px-6 py-12 md:py-24 ">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              {/* Left Image */}
+              <div className="w-full h-80 md:h-[400px] bg-gray-100 rounded-2xl flex items-center justify-center">
+                <Image
+                  src="/image/hero.svg"
+                  width={100}
+                  height={100}
+                  className="w-auto"
+                  alt="hero image"
+                />
+              </div>
 
-            {/* Right Content */}
-            <div className="text-center lg:text-left">
-              <h1 className="text-4xl lg:text-5xl font-[800] text-[#6D758F] mb-4 leading-[48px]">
-                Find the Help <br className="hidden lg:inline" />
-                You Need, All in One Place.
-              </h1>
-              <p className="text-[#6D758F] mb-8">
-                Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit
-                phasellus mollis sit aliquam sit nullam neque ultrices.
-              </p>
-              <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
-                <button className="bg-[#6D758F] text-white px-6 py-3 rounded-md font-medium shadow hover:bg-[#6D758F] transition">
-                  Get started →
-                </button>
-                <button className="bg-[#F8FAFF] text-[#6D758F] px-6 py-3 rounded-md font-medium hover:bg-[#6D758F] transition">
-                  Learn more
-                </button>
+              {/* Right Content */}
+              <div className="text-center md:text-left">
+                <h1 className="text-4xl md:text-5xl font-[800] text-[#6D758F] mb-4 leading-[48px]">
+                  Find the Help <br className="hidden md:inline" />
+                  You Need, All in One Place.
+                </h1>
+                <p className="text-[#6D758F] mb-8">
+                  Lorem ipsum dolor sit amet consectetur adipiscing eli mattis
+                  sit phasellus mollis sit aliquam sit nullam neque ultrices.
+                </p>
+                <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+                  <button className="bg-[#6D758F] text-white px-6 py-3 rounded-md font-medium shadow hover:bg-[#5a6175] transition">
+                    Get started →
+                  </button>
+                  <button className="bg-[#F8FAFF] text-[#6D758F] px-6 py-3 rounded-md font-medium hover:bg-[#e6ecf5] transition">
+                    Learn more
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
+
         <section className="px-6  bg-white text-center lg:h-[931px] py-10 ">
           {/* Header */}
           <div className="max-w-2xl mx-auto mb-12 mx-auto ">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#6D758F] mb-4 leading-[40px]">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#6D758F] mb-4 leading-[40px]">
               Services
             </h2>
             <p className="text-[#6D758F]">
@@ -274,11 +277,11 @@ export default function Page() {
           </div>
           <div className="flex items-center justify-center  ">
             {/* Grid */}
-            <div className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto  items-center justify-center flex">
+            <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto  items-center justify-center flex">
               {services.map((service, index) => (
                 <div
                   key={index}
-                  className="bg-white border border-[#E1E4ED] lg:w-[354px] h-[283px] rounded-xl shadow-md p-6 flex flex-col justify-center items-center text-center"
+                  className="bg-white border border-[#E1E4ED] md:w-[354px] h-[283px] rounded-xl shadow-md p-6 flex flex-col justify-center items-center text-center"
                 >
                   <div className="mb-4">
                     <div className=" rounded-md flex items-center justify-center">
@@ -309,16 +312,16 @@ export default function Page() {
             </button>
           </div>
         </section>
-        <section className="py-16 px-6 lg:px-10 bg-gray-50">
+        <section className="py-16 px-6 md:px-10 bg-gray-50 ">
           <div className="max-w-6xl px-4 mx-auto text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#6D758F] mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#6D758F] mb-4">
               What our clients have to say
             </h2>
             <p className="text-[#6D758F] max-w-2xl mx-auto mb-12">
               Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit
               phasellus mollis sit aliquam sit nullam.
             </p>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {testimonials.map((t, i) => (
                 <TestimonialCard key={i} {...t} />
               ))}
@@ -328,7 +331,7 @@ export default function Page() {
         <section className="bg-white py-16 overflow-hidden">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#6B738C]">Companies</h2>
-            <p className="text-[#6B738C] mt-4 max-w-xl mx-auto lg:block hidden">
+            <p className="text-[#6B738C] mt-4 max-w-xl mx-auto md:block hidden">
               Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam
               mauris sed ma
             </p>
@@ -344,18 +347,18 @@ export default function Page() {
                   alt="Company logo"
                   width={100}
                   height={100}
-                  className="h-8 lg:h-10 opacity-50 hover:opacity-100 transition duration-300"
+                  className="h-8 md:h-10 opacity-50 hover:opacity-100 transition duration-300"
                 />
               ))}
             </div>
           </div>
         </section>
-        <section className="lg:bg-[#717591] bg-white py-16 px-4 lg:h-[652px] flex items-center justify-center rounded-[8px]">
-          <div className="bg-white lg:h-[524px]  rounded-xl max-w-7xl mx-auto w-full lg:p-6 lg:p-12">
-            <div className="grid lg:grid-cols-2 gap-8 items-center  px-6">
+        <section className="md:bg-[#717591] bg-white py-16 px-4 lg:h-[652px] flex items-center justify-center rounded-[8px]">
+          <div className="bg-white lg:h-[524px]  rounded-xl max-w-7xl mx-auto w-full md:p-6 md:p-12">
+            <div className="grid md:grid-cols-2 gap-8 items-center  px-6">
               {/* Left side content */}
               <div className="flex flex-col items-start">
-                <div className="mb-4 lg:block hidden lg:text-left text-center flex lg:justify-start justify-center  items-center lg:items-start  ">
+                <div className="mb-4 md:block hidden md:text-left text-center flex md:justify-start justify-center  items-center md:items-start  ">
                   <Image
                     src="/placeholder-icon.svg"
                     alt="Icon"
@@ -363,10 +366,10 @@ export default function Page() {
                     height={48}
                   />
                 </div>
-                <h2 className="text-2xl lg:text-3xl font-bold text-[#475467] mb-2 lg:text-left text-center flex lg:justify-start justify-center  items-center lg:items-start ">
+                <h2 className="text-2xl md:text-3xl font-bold text-[#475467] mb-2 md:text-left text-center flex md:justify-start justify-center  items-center md:items-start ">
                   Why Rodo?
                 </h2>
-                <p className="text-[#667085] text-align lg:text-lg lg:block hidden lg:w-3/4">
+                <p className="text-[#667085] text-align md:text-lg md:block hidden md:w-3/4">
                   Lorem ipsum dolor sit amet consectetur nunc nunc sit velit
                   eget sollicitudin sit posuere augue vestibulum eget turpis
                   lobortis donec
@@ -378,22 +381,22 @@ export default function Page() {
                 {stats.map((stat, index) => (
                   <div
                     key={index}
-                    className={`rounded-2xl lg:my-0 my-3 p-4 shadow-md w-full border-[1px] border-[#E1E4ED] lg:border-[#6D758F] h-[80px] lg:h-[180px] flex lg:flex-col items-center lg:items-center lg:justify-center lg:p-6 lg:min-h-[140px] gap-4
+                    className={`rounded-2xl md:my-0 my-3 p-4 shadow-md w-full border-[1px] border-[#E1E4ED] md:border-[#6D758F] h-[80px] md:h-auto lg:h-[180px] flex md:flex-col items-center md:items-center md:justify-center md:p-6 md:min-h-[140px] gap-4
         ${
           index === 1 || index === 3
-            ? "lg:-translate-y-5" // <== Elevated on medium and up
+            ? "md:-translate-y-5" // <== Elevated on medium and up
             : ""
         }
         ${
           index === 0
-            ? "lg:bg-[#475467] bg-white lg:text-white text-[#475467]"
+            ? "md:bg-[#475467] bg-white md:text-white text-[#475467]"
             : "bg-white text-[#475467]"
         }
         transition-transform duration-300
       `}
                   >
                     {/* Icon on the left for mobile, top for desktop */}
-                    <div className="flex-shrink-0 lg:hidden block">
+                    <div className="flex-shrink-0 md:hidden block">
                       <Image
                         src={stat.icon}
                         alt="icon"
@@ -401,10 +404,10 @@ export default function Page() {
                         height={40}
                       />
                     </div>
-                    <div className="flex flex-col items-start lg:items-center">
+                    <div className="flex flex-col items-start md:items-center">
                       <p className="text-2xl font-bold">{stat.value}</p>
                       <p className="text-base font-medium t">{stat.label}</p>
-                      <p className="hidden lg:block text-sm text-[#6D758F] text-center mt-2">
+                      <p className="hidden md:block text-sm text-[#6D758F] text-center mt-2">
                         Lorem ipsum dolor sit amet consectetur adipiscing elit
                       </p>
                     </div>
@@ -415,7 +418,7 @@ export default function Page() {
           </div>
         </section>
         <section className="py-16 px-4 max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12 lg:px-0  px-4">
+          <div className="text-center mb-12 md:px-0  px-4">
             <h2 className="text-3xl font-bold text-[#6D758F]">
               How does it work?
             </h2>
@@ -426,7 +429,7 @@ export default function Page() {
           </div>
 
           {/* Desktop View */}
-          <div className="hidden lg:grid grid-cols-3 gap-6 ">
+          <div className="hidden md:grid grid-cols-3 gap-6 ">
             {steps.map((step, index) => (
               <div
                 key={index}
@@ -442,7 +445,7 @@ export default function Page() {
           </div>
 
           {/* Mobile View */}
-          <div className="lg:hidden flex flex-col gap-6 px-4 ">
+          <div className="md:hidden flex flex-col gap-6 px-4 ">
             {steps.slice(0, 4).map((_, index) => (
               <div
                 key={index}
@@ -467,10 +470,10 @@ export default function Page() {
             ))}
           </div>
         </section>
-        <section className="bg-[#6B728E] px-6 py-12 sm:py-20 lg:py-32 lg:mx-0 mx-8  lg:rounded-none rounded-[16px]">
-          <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
+        <section className="bg-[#6B728E] px-6 py-12 sm:py-20 md:py-32 md:mx-0 mx-8  md:rounded-none rounded-[16px]">
+          <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-12">
             {/* Image Box */}
-            <div className="w-full lg:w-1/2 flex justify-center lg:block hidden">
+            <div className="w-full md:w-1/2 flex justify-center md:block hidden">
               <div className="w-full max-w-[600px] aspect-[3/2] bg-[#E5E7EB] rounded-lg flex items-center justify-center">
                 <div className="w-20 h-20 border border-[#9CA3AF] rounded-md flex items-center justify-center">
                   <Image
@@ -484,15 +487,15 @@ export default function Page() {
             </div>
 
             {/* Content Box */}
-            <div className="w-full lg:w-1/2 text-center lg:text-left">
+            <div className="w-full md:w-1/2 text-center md:text-left">
               <h2 className="text-white text-4xl font-bold mb-4">
                 Work with us
               </h2>
-              <p className="text-white text-[14px] lg:text-lg mb-8">
+              <p className="text-white text-[14px] md:text-lg mb-8">
                 Lorem ipsum dolor sit amet consectetur adipiscing elidolor
                 mattis sit phasellus mollis sit aliquam sit nullam neques.
               </p>
-              <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+              <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
                 <button className="bg-white text-[#374151] font-semibold px-6 py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-gray-100 transition">
                   Get in touch
                   <span>→</span>
@@ -506,10 +509,10 @@ export default function Page() {
         </section>
 
         <footer className="bg-white text-gray-400 lg:border-[1px] border-[#E1E4ED] my-8  text-sm lg:h-[500px] flex items-center justify-center">
-          <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10  flex items-center flex-col ">
-            <div className="flex flex-col lg:flex-row lg:justify-between gap-10">
+          <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 md:px-8 py-10  flex items-center flex-col ">
+            <div className="flex flex-col md:flex-row md:justify-between gap-10">
               {/* Left side: About + Social icons */}
-              <div className="lg:max-w-md">
+              <div className="md:max-w-md">
                 <p className="text-xl text-gray-500 font-medium mb-4">
                   <Image
                     src="/logo.svg"
@@ -523,7 +526,7 @@ export default function Page() {
                   Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam
                   mauris sed ma
                 </p>
-                <div className="flex space-x-4 mt-6 lg:mt-10">
+                <div className="flex space-x-4 mt-6 md:mt-10">
                   {[Facebook, Twitter, Instagram, Linkedin, Youtube].map(
                     (Icon, idx) => (
                       <div
@@ -596,7 +599,7 @@ export default function Page() {
             <div className="my-10 border-t border-gray-200" />
 
             {/* Bottom section */}
-            <div className="flex flex-col items-center justify-center lg:flex-row gap-4 text-center text-[#B4B9C9]">
+            <div className="flex flex-col items-center justify-center md:flex-row gap-4 text-center text-[#B4B9C9]">
               <p>Copyright © 2025 Rodo | All Rights Reserved</p>
               <div className="space-x-4">
                 <a href="#" className="underline">
