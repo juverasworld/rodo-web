@@ -354,7 +354,7 @@ export default function Page() {
           </div>
         </section>
         <section className="md:bg-[#717591] bg-white py-16 px-4 lg:h-[652px] flex items-center justify-center rounded-[8px]">
-          <div className="bg-white lg:h-[524px]  rounded-xl max-w-7xl mx-auto w-full md:p-6 md:p-12">
+          <div className="bg-white lg:h-[524px] py-10 items-center justify-center flex flex-col  rounded-xl max-w-7xl mx-auto w-full md:p-6 md:p-12">
             <div className="grid md:grid-cols-2 gap-8 items-center  px-6">
               {/* Left side content */}
               <div className="flex flex-col items-start">
@@ -507,6 +507,7 @@ export default function Page() {
             </div>
           </div>
         </section>
+       
 
         <footer className="bg-white text-gray-400 lg:border-[1px] border-[#E1E4ED] my-8  text-sm lg:h-[500px] flex items-center justify-center">
           <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 md:px-8 py-10  flex items-center flex-col ">
