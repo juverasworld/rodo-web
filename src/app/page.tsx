@@ -170,14 +170,16 @@ export default function Page() {
               <Link href="#" className="hover:opacity-80 transition">
                 Services
               </Link>
-
+<Link href="/auth/sign-in">
               <button className="border border-[#D1D5DB] bg-[#F8FAFF] px-5 py-2 rounded-lg font-medium hover:shadow-sm transition">
                 Login
               </button>
-
+</Link>
+<Link href="/auth/sign-up">
               <button className="bg-[#6B738C] text-white px-5 py-2 rounded-lg font-medium flex items-center gap-1 hover:bg-[#5e6378] transition">
                 Sign up <ArrowRight size={16} />
               </button>
+</Link>
             </nav>
 
             {/* Mobile Menu Icon */}
@@ -217,13 +219,16 @@ export default function Page() {
                 Services
               </Link>
 
-              <button className="border border-white px-6 py-2 rounded-lg font-medium">
+            <Link href="/auth/sign-in">
+              <button className="border border-[#D1D5DB] bg-[#F8FAFF] px-5 py-2 rounded-lg font-medium hover:shadow-sm transition">
                 Login
               </button>
-
-              <button className="bg-white text-[#6B738C] px-6 py-2 rounded-lg font-medium flex items-center gap-2">
+</Link>
+<Link href="/auth/sign-up">
+              <button className="bg-[#6B738C] text-white px-5 py-2 rounded-lg font-medium flex items-center gap-1 hover:bg-[#5e6378] transition">
                 Sign up <ArrowRight size={16} />
               </button>
+</Link>
             </div>
           )}
         </header>
