@@ -889,7 +889,7 @@ const validate = (): FormErrors => {
               </div>
 
               <p className="text-center text-sm text-[#F0F0F0] mt-6">
-                Don't have an account?{" "}
+                Don&apos;t have an account?{" "}
                 <Link href="/auth/sign-up">
                 <span className="text-[#6D758F] font-semibold cursor-pointer">
                   Sign up

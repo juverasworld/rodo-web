@@ -63,24 +63,27 @@ export default function EmailVerification() {
         <div>
           <h2 className="text-[32px] font-semibold text-[#6D758F]">Verification Code Sent!</h2>
           <p className="text-[#6D758F] text-sm mt-1">
-            We've sent a verification code to your email. Enter the code sent to your email to proceed
+            We&apos;ve sent a verification code to your email. Enter the code sent to your email to proceed
           </p>
         </div>
 
         {/* Input Boxes */}
         <div className="flex justify-center gap-3">
           {code.map((digit, i) => (
-            <input
-              key={i}
-              type="text"
-              inputMode="numeric"
-              maxLength={1}
-              value={digit}
-              ref={(el) => (inputRefs.current[i] = el!)}
-              onChange={(e) => handleChange(i, e.target.value)}
-              onKeyDown={(e) => handleKeyDown(e, i)}
-              className="w-14 h-14 border-2 border-[#6D758F] rounded-md text-2xl text-center focus:outline-none focus:border-gray-600"
-            />
+           <input
+  key={i}
+  type="text"
+  inputMode="numeric"
+  maxLength={1}
+  value={digit}
+  ref={(el) => {
+    inputRefs.current[i] = el!;
+  }}
+  onChange={(e) => handleChange(i, e.target.value)}
+  onKeyDown={(e) => handleKeyDown(e, i)}
+  className="w-14 h-14 border-2 border-[#6D758F] rounded-md text-2xl text-center focus:outline-none focus:border-gray-600"
+/>
+
           ))}
         </div>
 
@@ -95,7 +98,7 @@ export default function EmailVerification() {
         {/* Resend & Timer */}
         <div className="text-sm text-[#6D758F]">
           <p>
-            Didn't receive the code?{" "}
+            Didn&apos;t receive the code?{" "}
             <button onClick={handleResend} className="text-blue-600 underline">
               Resend code
             </button>
