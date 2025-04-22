@@ -573,7 +573,7 @@ const validate = (): FormErrors => {
       </Head>
       <div className="flex items-center justify-center outfit-font">
         <div className="min-h-screen flex flex-col lg:flex-row bg-white items-center justify-center max-w-[1280px] mx-auto">
-          <div className="hidden lg:flex lg:w-1/2 flex-col justify-center bg-[#F1F3F7] lg:h-[1006px] p-12 rounded-r-3xl">
+          <div className="hidden lg:flex lg:w-1/2 flex-col justify-center bg-[#F1F3F7]  p-12 rounded-r-3xl">
            {isBusinessClient ? (
         <>
          <h1 className="text-[48px] font-bold text-[#6D758F] mb-6 lg:leading-[60px]">
