@@ -1,6 +1,8 @@
 "use client"
 
 import { useState, useRef, useEffect } from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function EmailVerification() {
   const CODE_LENGTH = 4;
@@ -47,12 +49,20 @@ export default function EmailVerification() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white px-4">
+    <div className="min-h-screen flex items-center justify-center bg-white px-4 outfit-font">
       <div className="max-w-md w-full space-y-6 text-center">
-        <h1 className="text-4xl font-bold text-gray-700 tracking-tight">rodo.</h1>
+        <h1 className="text-4xl font-bold text-[#6D758F] tracking-tight flex items-center justify-center">  <Link href="/">
+                <Image
+                  src="/logo.svg"
+                  width={100}
+                  height={100}
+                  alt="logo"
+                  className="w-auto"
+                />
+                </Link></h1>
         <div>
-          <h2 className="text-2xl font-semibold text-gray-700">Verification Code Sent!</h2>
-          <p className="text-gray-500 text-sm mt-1">
+          <h2 className="text-[32px] font-semibold text-[#6D758F]">Verification Code Sent!</h2>
+          <p className="text-[#6D758F] text-sm mt-1">
             We've sent a verification code to your email. Enter the code sent to your email to proceed
           </p>
         </div>
@@ -69,7 +79,7 @@ export default function EmailVerification() {
               ref={(el) => (inputRefs.current[i] = el!)}
               onChange={(e) => handleChange(i, e.target.value)}
               onKeyDown={(e) => handleKeyDown(e, i)}
-              className="w-14 h-14 border-2 border-gray-400 rounded-md text-2xl text-center focus:outline-none focus:border-gray-600"
+              className="w-14 h-14 border-2 border-[#6D758F] rounded-md text-2xl text-center focus:outline-none focus:border-gray-600"
             />
           ))}
         </div>
@@ -77,13 +87,13 @@ export default function EmailVerification() {
         {/* Verify Button */}
         <button
           onClick={handleVerify}
-          className="w-full bg-gray-500 hover:bg-gray-600 text-white py-3 rounded-md font-medium"
+          className="w-full bg-[#6D758F] hover:bg-gray-600 text-white py-3 rounded-md font-medium"
         >
           Verify Now
         </button>
 
         {/* Resend & Timer */}
-        <div className="text-sm text-gray-500">
+        <div className="text-sm text-[#6D758F]">
           <p>
             Didn't receive the code?{" "}
             <button onClick={handleResend} className="text-blue-600 underline">
