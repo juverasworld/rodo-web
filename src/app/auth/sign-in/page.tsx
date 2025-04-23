@@ -571,47 +571,59 @@ const validate = (): FormErrors => {
           }
         `}</style>
       </Head>
-      <div className="flex items-center justify-center outfit-font">
-        <div className="min-h-screen flex flex-col lg:flex-row bg-white items-center justify-center max-w-[1280px] mx-auto">
-          <div className="hidden lg:flex lg:w-1/2 flex-col justify-center bg-[#F1F3F7]  p-12 rounded-r-3xl">
-           {isBusinessClient ? (
-        <>
-         <h1 className="text-[48px] font-bold text-[#6D758F] mb-6 lg:leading-[60px]">
-            Showcase Your Talent, Gain Trust, and Get Booked — All in One Place!
-            </h1>
-            <p className="text-[#6D758F] text-[20px] leading-[24px]">
-      Lorem ipsum dolor sit amet consectetur adipiscing eli Lorem ipsum dolor sit amet consectetur adipiscing eli Lorem ipsum dolor sit amet consectetur adipiscing eli Lorem ipsum dolor sit amet consectetur adipiscing eli Lorem ipsum dolor sit amet consectetur adipiscing eli Lorem ipsum dolor sit amet consectetur adipiscing eli 
-            </p>
-        </>
-        ) : (
-          <>
-            <h1 className="text-[48px] font-bold text-[#6D758F] mb-6 lg:leading-[60px]">
-              Find skilled artisans <br /> and trusted freelancers for your
-              projects
-            </h1>
-            <p className="text-[#6D758F] text-[20px] leading-[24px]">
-              Lorem ipsum dolor sit amet consectetur adipiscing eli Lorem ipsum
-              dolor sit amet consectetur adipiscing eli Lorem ipsum dolor sit
-              amet consectetur adipiscing eli Lorem ipsum dolor sit amet
-              consectetur adipiscing eli Lorem ipsum dolor sit amet consectetur
-              adipiscing eli Lorem ipsum dolor sit amet consectetur adipiscing
-              eli
-            </p>
-          </>
-        )}
+      <div
+        className="flex items-center justify-center outfit-font bg-no-repeat bg-center bg-cover"
+        style={{ backgroundImage: "url('/sign.svg')" }}
+      >
+        <div className="min-h-screen flex flex-col bg-no-repeat bg-center bg-cover lg:flex-row  items-center justify-center max-w-[1280px] mx-auto">
+          <div
+            style={{ backgroundImage: "url('/signs.svg')" }}
+            className="hidden lg:flex lg:w-1/2 flex-col justify-center bg-no-repeat bg-center bg-cover p-12 rounded-r-3xl"
+          >
+            {isBusinessClient ? (
+              <>
+                <h1 className="text-[48px] font-bold text-[#6D758F] mb-6 lg:leading-[60px]">
+                  Showcase Your Talent, Gain Trust, and Get Booked — All in One
+                  Place!
+                </h1>
+                <p className="text-[#6D758F] text-[20px] leading-[24px]">
+                  Lorem ipsum dolor sit amet consectetur adipiscing eli Lorem
+                  ipsum dolor sit amet consectetur adipiscing eli Lorem ipsum
+                  dolor sit amet consectetur adipiscing eli Lorem ipsum dolor
+                  sit amet consectetur adipiscing eli Lorem ipsum dolor sit amet
+                  consectetur adipiscing eli Lorem ipsum dolor sit amet
+                  consectetur adipiscing eli
+                </p>
+              </>
+            ) : (
+              <>
+                <h1 className="text-[48px] font-bold text-[#6D758F] mb-6 lg:leading-[60px]">
+                  Find skilled artisans <br /> and trusted freelancers for your
+                  projects
+                </h1>
+                <p className="text-[#6D758F] text-[20px] leading-[24px]">
+                  Lorem ipsum dolor sit amet consectetur adipiscing eli Lorem
+                  ipsum dolor sit amet consectetur adipiscing eli Lorem ipsum
+                  dolor sit amet consectetur adipiscing eli Lorem ipsum dolor
+                  sit amet consectetur adipiscing eli Lorem ipsum dolor sit amet
+                  consectetur adipiscing eli Lorem ipsum dolor sit amet
+                  consectetur adipiscing eli
+                </p>
+              </>
+            )}
           </div>
 
           <div className="lg:w-1/2 w-full flex flex-col justify-center items-center p-6 sm:p-10">
             <div className="w-full max-w-md">
               <h2 className="text-4xl font-bold  flex lg:items-end lg:justify-end items-center justify-center text-[#6D758F] text-center mb-8">
                 <Link href="/">
-                <Image
-                  src="/logo.svg"
-                  width={100}
-                  height={100}
-                  alt="logo"
-                  className="w-auto"
-                />
+                  <Image
+                    src="/logo.svg"
+                    width={100}
+                    height={100}
+                    alt="logo"
+                    className="w-auto"
+                  />
                 </Link>
               </h2>
 
@@ -771,28 +783,28 @@ const validate = (): FormErrors => {
                   </>
                 )}
 
-                 <div className="w-full">
-      <label className="block text-sm font-semibold text-[#F0F0F0] mb-2">
-        Password
-      </label>
-      <div className="relative">
-        <input
-          type={showPassword ? "text" : "password"}
-          value={password}
-          onChange={e => setPassword(e.target.value)}
-                    className="mt-1 block w-full rounded-md border border-[#F0F0F0] p-3 focus:outline-none focus:ring-2 focus:ring-[#6D758F]"
-          placeholder="Enter your password"
-        />
-        <button
-          type="button"
-          onClick={() => setShowPassword(prev => !prev)}
-          className="absolute inset-y-0 right-3 flex items-center text-[#F0F0F0] hover:text-gray-700"
-        >
-          {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
-        </button>
-      </div>
-    </div>
-{/* 
+                <div className="w-full">
+                  <label className="block text-sm font-semibold text-[#F0F0F0] mb-2">
+                    Password
+                  </label>
+                  <div className="relative">
+                    <input
+                      type={showPassword ? "text" : "password"}
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      className="mt-1 block w-full rounded-md border border-[#F0F0F0] p-3 focus:outline-none focus:ring-2 focus:ring-[#6D758F]"
+                      placeholder="Enter your password"
+                    />
+                    <button
+                      type="button"
+                      onClick={() => setShowPassword((prev) => !prev)}
+                      className="absolute inset-y-0 right-3 flex items-center text-[#F0F0F0] hover:text-gray-700"
+                    >
+                      {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+                    </button>
+                  </div>
+                </div>
+                {/* 
                 <div>
                   <label className="block text-sm font-medium text-[#6D758F]">
                     Confirm password
@@ -891,9 +903,9 @@ const validate = (): FormErrors => {
               <p className="text-center text-sm text-[#F0F0F0] mt-6">
                 Don&apos;t have an account?{" "}
                 <Link href="/auth/sign-up">
-                <span className="text-[#6D758F] font-semibold cursor-pointer">
-                  Sign up
-                </span>
+                  <span className="text-[#6D758F] font-semibold cursor-pointer">
+                    Sign up
+                  </span>
                 </Link>
               </p>
             </div>
