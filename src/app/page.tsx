@@ -119,7 +119,7 @@ const testimonials: TestimonialCardProps[] = [
 
 const TestimonialCard: FC<TestimonialCardProps> = ({ name, title, text, img }) => (
   <div className="border border-[#E1E4ED] rounded-xl p-6 shadow-md space-y-4 bg-white lg:h-[283px] flex flex-col  justify-center">
-    <div className="flex space-x-1 text-[#B4B9C9]">
+    <div className="flex space-x-1 text-[#808080]">
       {Array(5)
         .fill(null)
         .map((_, i) => (
@@ -420,10 +420,10 @@ export default function Page() {
         </section>
         <section
           style={{ backgroundImage: "url('/image/why.svg')" }}
-          className="bg-no-repeat bg-center bg-cover py-16 px-4 lg:h-[652px] flex items-center justify-center rounded-[8px]"
+          className="bg-no-repeat bg-center bg-cover py-16 px-4 lg:h-[652px] flex items-center justify-center rounded-[8px] "
         >
-          <div className=" lg:h-[524px] py-10 items-center justify-center flex flex-col  rounded-xl max-w-[1500px] mx-auto w-full md:p-6 md:p-12">
-            <div className="grid md:grid-cols-2 gap-8 items-center  px-6">
+          <div className=" lg:h-[524px] py-10 items-center justify-center flex flex-col  rounded-xl max-w-[1500px] mx-auto w-full md:p-6 p-0 ">
+            <div className="grid md:grid-cols-2 gap-8 items-center  md:px-6">
               {/* Left side content */}
               <div className="flex flex-col items-start">
                 {/* <div className="mb-4 md:block hidden md:text-left text-center flex md:justify-start justify-center  items-center md:items-start  ">
@@ -446,11 +446,11 @@ export default function Page() {
               </div>
 
               {/* Right side stats */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 w-full  gap-4">
                 {stats.map((stat, index) => (
                   <div
                     key={index}
-                    className={`rounded-2xl md:my-0 my-3 p-4 shadow-md w-full border-[1px] border-[#E1E4ED] md:border-[#6D758F] h-[80px] md:h-auto lg:h-[180px] flex md:flex-col items-center md:items-center md:justify-center md:p-6 md:min-h-[140px] gap-4
+                    className={`rounded-2xl md:my-0 my-3 p-4  shadow-md w-full border-[1px] border-[#E1E4ED] md:border-[#6D758F]  md:h-auto lg:h-[180px] flex md:flex-col items-center md:items-center md:justify-center md:p-6 md:min-h-[140px] gap-4
         ${
           index === 1 || index === 3
             ? "md:-translate-y-5" // <== Elevated on medium and up
@@ -465,18 +465,18 @@ export default function Page() {
       `}
                   >
                     {/* Icon on the left for mobile, top for desktop */}
-                    <div className="flex-shrink-0 md:hidden block">
+                    {/* <div className="flex-shrink-0 md:hidden block">
                       <Image
                         src={stat.icon}
                         alt="icon"
                         width={40}
                         height={40}
                       />
-                    </div>
+                    </div> */}
                     <div className="flex flex-col items-start md:items-center">
                       <p className="text-2xl font-bold">{stat.value}</p>
                       <p className="text-base font-medium t">{stat.label}</p>
-                      <p className="hidden md:block text-sm text-[#6D758F] text-center mt-2">
+                      <p className="block text-sm text-[#6D758F] text-center mt-2">
                         {stat.desc}
                       </p>
                     </div>
@@ -498,7 +498,7 @@ export default function Page() {
           </div>
 
           {/* Desktop View */}
-          <div className="hidden md:grid grid-cols-3 gap-6 ">
+          <div className="grid md:grid-cols-2 grid-cols-1  lg:grid-cols-3 gap-6 ">
             {steps.map((step, index) => (
               <div
                 key={index}
@@ -529,7 +529,7 @@ export default function Page() {
           </div>
 
           {/* Mobile View */}
-          <div className="md:hidden flex flex-col gap-6 px-4 ">
+          {/* <div className="md:hidden flex flex-col gap-6 px-4 ">
             {steps.slice(0, 4).map((_, index) => (
               <div
                 key={index}
@@ -552,19 +552,19 @@ export default function Page() {
                 </p>
               </div>
             ))}
-          </div>
+          </div> */}
         </section>
         <section className="  py-12 sm:py-20 md:py-32 md:mx-0 mx-8  md:rounded-none ">
-          <div className="bg-[#F5F5F5] max-w-[1500px] mx-auto rounded-[16px] flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+          <div className="bg-[#F5F5F5] max-w-[1500px] mx-auto rounded-[16px] flex flex-col md:flex-row items-center justify-between gap-12">
             {/* Image Box */}
-            <div className="w-full md:w-1/2 flex justify-center md:block hidden">
-              <div className="w-full max-w-[600px] aspect-[3/2]  flex items-center justify-center">
+            <div className="w-full md:w-1/2 flex justify-center rounded-[16px] ">
+              <div className="w-full max-w-[600px] aspect-[3/2]  flex items-center justify-center rounded-none md:rounded-t-none rounded-t-[16px] ">
                 <Image
                   src="/placeholder-image-icon.svg"
                   alt="placeholder"
                   width={40}
                   height={40}
-                  className="w-full"
+                  className="w-full rounded-t-none md:rounded-t-[16px] border-2"
                 />
                 {/* <div className="w-20 h-20 border border-[#9CA3AF] rounded-md flex items-center justify-center">
                 </div> */}
@@ -600,7 +600,7 @@ export default function Page() {
             <div className="flex flex-col md:flex-row md:justify-between gap-10">
               {/* Left side: About + Social icons */}
               <div className="md:max-w-md">
-                <p className="text-xl text-gray-500 font-medium mb-4">
+                <p className="text-xl text-[#808080] font-medium mb-4">
                   <Image
                     src="/logo.svg"
                     width={100}
@@ -609,7 +609,7 @@ export default function Page() {
                     className="w-auto"
                   />
                 </p>
-                <p className="text-xl text-[#6D758F] font-medium mb-4 lg:flex hidden">
+                <p className="text-xl text-[#808080] font-medium mb-4 lg:flex hidden">
                   Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam
                   mauris sed ma
                 </p>
@@ -618,7 +618,7 @@ export default function Page() {
                     (Icon, idx) => (
                       <div
                         key={idx}
-                        className="w-10 h-10 text-[white] bg-[#B4B9C9] flex items-center justify-center rounded-md"
+                        className="w-10 h-10 text-[white] bg-[#5188FF] flex items-center justify-center rounded-md"
                       >
                         <Icon />
                       </div>
@@ -634,7 +634,7 @@ export default function Page() {
                   <h4 className="text-[#6D758F] font-semibold mb-4">
                     For customers
                   </h4>
-                  <ul className="space-y-2 text-[#B4B9C9]">
+                  <ul className="space-y-2 text-[#808080]">
                     <li>How it works?</li>
                     <li>Pricing</li>
                     <li>Find a worker</li>
@@ -647,7 +647,7 @@ export default function Page() {
                   <h4 className="text-[#6D758F] font-semibold mb-4">
                     For businesses
                   </h4>
-                  <ul className="space-y-2 text-[#B4B9C9]">
+                  <ul className="space-y-2 text-[#808080]">
                     <li>How to join?</li>
                     <li>Fees</li>
                     <li>Best practices</li>
@@ -658,7 +658,7 @@ export default function Page() {
                 {/* Column 3 */}
                 <div>
                   <h4 className="text-[#6D758F] font-semibold mb-4">Info</h4>
-                  <ul className="space-y-2 text-[#B4B9C9]">
+                  <ul className="space-y-2 text-[#808080]">
                     <li>About us</li>
                     <li>Help center</li>
                     <li>Blog</li>
@@ -671,7 +671,7 @@ export default function Page() {
                   <h4 className="text-[#6D758F] font-semibold mb-4">
                     Services
                   </h4>
-                  <ul className="space-y-2 text-[#B4B9C9]">
+                  <ul className="space-y-2 text-[#808080]">
                     <li>Near me</li>
                     <li>The most popular</li>
                     <li>By category</li>
@@ -686,7 +686,7 @@ export default function Page() {
             <div className="my-10 border-t border-gray-200" />
 
             {/* Bottom section */}
-            <div className="flex flex-col items-center justify-center md:flex-row gap-4 text-center text-[#B4B9C9]">
+            <div className="flex flex-col items-center justify-center md:flex-row gap-4 text-center text-[#808080]">
               <p>Copyright © 2025 Rodo | All Rights Reserved</p>
               <div className="space-x-4">
                 <a href="#" className="underline">
