@@ -145,15 +145,15 @@ const validate = (): FormErrors => {
         <div className="min-h-screen flex flex-col lg:flex-row bg-white items-center justify-center max-w-[1280px] mx-auto">
           <div
             style={{ backgroundImage: "url('/signs.svg')" }}
-            className="m-3 hidden lg:flex lg:w-1/2 flex-col justify-center bg-[#F1F3F7] lg:h-[1006px] p-12 rounded-3xl bg-no-repeat bg-center bg-cover"
+            className="m-3 hidden lg:flex lg:w-1/2 flex-col justify-center bg-[#F1F3F7] lg:h-[1006px] lg:w-[500px] p-12 rounded-3xl bg-no-repeat bg-center bg-cover"
           >
             {isBusinessClient ? (
               <>
-                <h1 className="text-[48px] font-bold text-[#6D758F] mb-6 lg:leading-[60px]">
+                <h1 className="text-[48px] hidden font-bold text-[#6D758F] mb-6 lg:leading-[60px]">
                   Showcase Your Talent, Gain Trust, and Get Booked — All in One
                   Place!
                 </h1>
-                <p className="text-[#6D758F] text-[20px] leading-[24px]">
+                <p className="text-[#6D758F] hidden text-[20px] leading-[24px]">
                   Lorem ipsum dolor sit amet consectetur adipiscing eli Lorem
                   ipsum dolor sit amet consectetur adipiscing eli Lorem ipsum
                   dolor sit amet consectetur adipiscing eli Lorem ipsum dolor
@@ -164,11 +164,11 @@ const validate = (): FormErrors => {
               </>
             ) : (
               <>
-                <h1 className="text-[48px] font-bold text-[#6D758F] mb-6 lg:leading-[60px]">
+                <h1 className="text-[48px] hidden font-bold text-[#6D758F] mb-6 lg:leading-[60px]">
                   Find skilled artisans <br /> and trusted freelancers for your
                   projects
                 </h1>
-                <p className="text-[#6D758F] text-[20px] leading-[24px]">
+                <p className="text-[#6D758F] hidden text-[20px] leading-[24px]">
                   Lorem ipsum dolor sit amet consectetur adipiscing eli Lorem
                   ipsum dolor sit amet consectetur adipiscing eli Lorem ipsum
                   dolor sit amet consectetur adipiscing eli Lorem ipsum dolor

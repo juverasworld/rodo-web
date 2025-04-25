@@ -575,18 +575,18 @@ const validate = (): FormErrors => {
         className="flex items-center justify-center outfit-font bg-no-repeat bg-center bg-cover"
         style={{ backgroundImage: "url('/sign.svg')" }}
       >
-        <div className="min-h-screen flex flex-col bg-no-repeat bg-center bg-cover lg:flex-row  items-center justify-center max-w-[1280px] mx-auto">
+        <div className="min-h-screen flex flex-col bg-white bg-no-repeat bg-center bg-cover lg:flex-row  items-center justify-center max-w-[1280px] mx-auto">
           <div
             style={{ backgroundImage: "url('/signs.svg')" }}
-            className="hidden lg:flex lg:w-1/2 flex-col justify-center bg-no-repeat bg-center bg-cover p-12 rounded-r-3xl"
+            className="hidden lg:flex lg:w-1/2 flex-col justify-center bg-no-repeat bg-center ml-4 bg-cover p-12 rounded-3xl lg:h-[906px] lg:w-[500px]"
           >
             {isBusinessClient ? (
               <>
-                <h1 className="text-[48px] font-bold text-[#6D758F] mb-6 lg:leading-[60px]">
+                <h1 className="text-[48px] hidden font-bold text-[#6D758F] mb-6 lg:leading-[60px]">
                   Showcase Your Talent, Gain Trust, and Get Booked — All in One
                   Place!
                 </h1>
-                <p className="text-[#6D758F] text-[20px] leading-[24px]">
+                <p className="text-[#6D758F] hidden text-[20px] leading-[24px]">
                   Lorem ipsum dolor sit amet consectetur adipiscing eli Lorem
                   ipsum dolor sit amet consectetur adipiscing eli Lorem ipsum
                   dolor sit amet consectetur adipiscing eli Lorem ipsum dolor
@@ -597,11 +597,11 @@ const validate = (): FormErrors => {
               </>
             ) : (
               <>
-                <h1 className="text-[48px] font-bold text-[#6D758F] mb-6 lg:leading-[60px]">
+                <h1 className="text-[48px] hidden font-bold text-[#6D758F] mb-6 lg:leading-[60px]">
                   Find skilled artisans <br /> and trusted freelancers for your
                   projects
                 </h1>
-                <p className="text-[#6D758F] text-[20px] leading-[24px]">
+                <p className="text-[#6D758F] hidden text-[20px] leading-[24px]">
                   Lorem ipsum dolor sit amet consectetur adipiscing eli Lorem
                   ipsum dolor sit amet consectetur adipiscing eli Lorem ipsum
                   dolor sit amet consectetur adipiscing eli Lorem ipsum dolor
